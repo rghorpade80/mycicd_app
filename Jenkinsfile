@@ -68,7 +68,7 @@ pipeline {
         stage ('DEPLOY GRAPH SEARCH ON K8S'){
 		
             steps{
-					kubernetesDeploy configs: 'deployment.yml', kubeConfig: [path: ''], kubeconfigId: 'KUBE_CLUSTER_CONFIG', secretName: '', ssh: [sshCredentialsId: '*', sshServer: ''], textCredentials: [certificateAuthorityData: '', clientCertificateData: '', clientKeyData: '', serverUrl: 'https://']
+					kubernetesDeploy configs: 'deployment.yml', kubeConfig: [path: ''], kubeconfigId: 'kubeconfig', secretName: '', ssh: [sshCredentialsId: '*', sshServer: ''], textCredentials: [certificateAuthorityData: '', clientCertificateData: '', clientKeyData: '', serverUrl: 'https://']
 					
             }
             
