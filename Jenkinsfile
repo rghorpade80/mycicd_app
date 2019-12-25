@@ -2,7 +2,7 @@ pipeline {
     agent any 
     environment {
         MAVEN_HOME = tool('Maven')
-        JAVA_HOME = tool('JAVA')
+        JAVA_HOME = tool('JDK')
     }
     
     stages {
