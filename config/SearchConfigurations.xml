@@ -1,0 +1,82 @@
+<searchconfigurations>
+	<search key="Project" description="" userpreference="1" projectbasedsecurity="1" outputobject="Project">
+		<criteria noofrows="2" noofcolumns="3" columnwidth="33.33,33.33,33.33">
+			<parameter key="ProjectCode" name="projectCode" businessobject="Project" displaytype="1" layoutid="r1c1" columncount="1" defaultvalue="" isvisible="1" searchtype="1" source ="4" values="" orderby="" relationname=""/>
+			<parameter key="DataPlan" name="taskName" businessobject="TestPlan" displaytype="3" layoutid="r1c2" defaultvalue="" isvisible="1" searchtype="1" source = "4" values="" orderby="" relationname=""/>
+			<parameter key="EngModel" name="engModel" businessobject="EngineSubSystem" displaytype="3" layoutid="r1c3" defaultvalue="" isvisible="1" searchtype="1" source = "4" values="" orderby="" relationname=""/>
+			<parameter key="DataName" name="dataName" businessobject="DataName" displaytype="3" layoutid="r2c1" defaultvalue="" isvisible="1" searchtype="1" source = "4" values="" orderby="" relationname=""/>
+			<parameter key="Rot" name="eventID" businessobject="Rot" displaytype="3" layoutid="r2c2" defaultvalue="" isvisible="1" searchtype="1" source ="4" values="" orderby="" relationname=""/>
+			<parameter key="ModelYear" name="modelYear" businessobject="Project" displaytype="3" layoutid="r2c3" defaultvalue="" isvisible="1" searchtype="1" source ="4" values="" orderby="" relationname=""/>
+		</criteria>
+		<results>
+			<result type="Table" key="TabelView" checkboxrequired="0" islink="1" link="DataName">
+			    <parameter key="SrNo" name="SrNo" businessobject="" subfilter="1" filtertype="2" orderby="" relationname=""/>
+			    <parameter key="ModelYear" name="modelYear" businessobject="Project" subfilter="1" filtertype="1" orderby="" relationname=""/>
+			    <parameter key="ProjectCode" name="projectCode" businessobject="Project" subfilter="1" filtertype="2" orderby="" relationname=""/>
+				<parameter key="EngModel" name="engModel" businessobject="EngineSubSystem" subfilter="1" filtertype="1" orderby="" relationname=""/>
+				<parameter key="Event" name="event" businessobject="Prototype" subfilter="1" filtertype="1" orderby="" relationname=""/>
+				<parameter key="Function" name="roleFunction1" businessobject="FunctionalGroup" subfilter="1" filtertype="1" orderby="" relationname=""/>
+				<parameter key="DataPlan" name="taskName" businessobject="TestPlan" subfilter="1" filtertype="2" orderby="" relationname=""/>
+<!-- 				<parameter key="TestName" name="name" businessobject="Test" subfilter="1" filtertype="2" orderby="" relationname=""/> -->
+				<parameter key="DataName" name="dataName" businessobject="DataName" subfilter="1" filtertype="2" orderby="" relationname=""/>
+				<parameter key="DocumentPlan" name="taskName" businessobject="DocumentPlan" subfilter="1" filtertype="2" orderby="" relationname=""/>
+				<parameter key="DocumentName" name="document" businessobject="Document" subfilter="1" filtertype="2" orderby="" relationname=""/>
+			</result>
+			<result type="Tree" key="TreeView">
+				<node nodetype="Project" parametername="projectCode" businessobject="Project" orderby="" child="TestPlan" />
+				<node nodetype="TestPlan" parametername="taskName" businessobject="TestPlan" orderby="" parent="Project" child="Test"/>
+				<node nodetype="DocumentPlan" parametername="taskName" businessobject="DocumentPlan" orderby="" parent="Project" child=""/>
+				<node nodetype="Test" parametername="name" businessobject="Test" orderby="" parent="TestPlan" child="DataName" />
+				<node nodetype="DataName" parametername="dataName" businessobject="DataName" orderby="" parent="Test" />
+			</result>
+		</results>
+	</search>
+	
+	<search key="GraphML" description="" userpreference="1" projectbasedsecurity="1" outputobject="Layer1_Node">
+		<criteria noofrows="1" noofcolumns="3" columnwidth="33.33,33.33,33.33">
+			<parameter key="Category" name="Category" businessobject="Layer1_Node" displaytype="3" layoutid="r1c1" columncount="1" defaultvalue="" isvisible="1" searchtype="1" source ="4" values="" orderby="" relationname=""/>
+			<parameter key="Word" name="Word" businessobject="Layer1_Node" displaytype="3" layoutid="r1c2" defaultvalue="" isvisible="1" searchtype="1" source ="4" values="" orderby="" relationname=""/>
+			<parameter key="GraphMLId" name="GraphMLId" businessobject="Layer1_Node" displaytype="3" layoutid="r1c3" defaultvalue="" isvisible="1" searchtype="1" source ="4" values="" orderby="" relationname=""/>
+		</criteria>
+		<results>
+			<result type="Table" key="TabelView" checkboxrequired="0" islink="0" link="">
+			    <parameter key="SrNo" name="SrNo" businessobject="" subfilter="1" filtertype="2" orderby="" relationname=""/>
+			    <parameter key="Category" name="Category" businessobject="Layer1_Node" subfilter="1" filtertype="2" orderby="" relationname=""/>
+			    <parameter key="Word" name="Word" businessobject="Layer1_Node" subfilter="1" filtertype="2" orderby="" relationname=""/>
+			      <parameter key="GraphMLId" name="GraphMLId" businessobject="Layer1_Node" subfilter="1" filtertype="2" orderby="" relationname=""/>
+			      <parameter key="Importance" name="Importance" businessobject="Layer1_Node" subfilter="1" filtertype="2" orderby="" relationname=""/>
+			      
+			</result>
+			<result type="Tree" key="TreeView">
+				<node nodetype="Layer1_Node" parametername="GraphMLId" businessobject="Layer1_Node" orderby="" child="" />
+			</result>
+		</results>
+	</search>
+	<ENUMS>
+		<displaytype>
+			<ENUM name="COMBOBOX" value="1"/>
+			<ENUM name="MULTICOMBO" value="2"/>
+			<ENUM name="TEXTBOX" value="3"/>
+			<ENUM name="DATE" value="4"/>
+			<ENUM name="DATERANGE" value="5"/>
+		</displaytype>
+		<searchtype>
+			<ENUM name="SIMPLE" value="1"/>
+			<ENUM name="ADVANCED" value="2"/>
+		</searchtype>
+		<datasource>
+			<ENUM name="MANUAL" value="1"/>
+			<ENUM name="FIXED" value="2"/>
+			<ENUM name="CATALOG" value="3"/>
+			<ENUM name="BUSINESSOBJECT" value="4"/>
+		</datasource>
+		<resulttype>
+			<ENUM name="TREE" value="1"/>
+			<ENUM name="TABLE" value="2"/>
+		</resulttype>
+		<filtertype>
+			<ENUM name="COMBOBOX" value="1"/>
+			<ENUM name="TEXTBOX" value="2"/>
+		</filtertype>
+	</ENUMS>
+</searchconfigurations>

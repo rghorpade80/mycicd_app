@@ -1,0 +1,36 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: graph-svc
+  labels:
+    app: graph
+spec:
+  type: NodePort
+  ports: 
+  - port: 8093
+    nodePort: 31002 
+  selector:
+    app: graph    
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: graph-deployment
+  labels:
+    app: graph
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: graph
+  template:
+    metadata:
+      labels:
+        app: graph
+    spec:
+      containers:
+      - name: graph11
+        image: HJWIN10PVJTDE24:5002/iasys_d/graph_search_doc:latest
+        ports:
+        - containerPort: 8093
+

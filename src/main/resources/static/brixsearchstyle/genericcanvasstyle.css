@@ -1,0 +1,257 @@
+/* .genericCanvasContainer.webix_view{ */
+/* 	overflow: auto!important; */
+/* } */
+html, body {
+    height: 100%; 
+    line-height: 14px!important;
+}
+body {
+    overflow: auto!important;
+}
+.genericCnvs .webix_view.webix_layout_line{
+	height: auto!important;
+}
+.webix_view.genericCanvasContainer{
+	height: auto!important;
+}
+.genericCanvasContainer .webix_template{
+	height: auto!important;
+}
+.graphTrashIconStyle{
+	font-size: 18px!important;
+    margin-top: 8px;
+    cursor:pointer!important;
+}
+/*
+ *@lobipanel css
+ */
+.panel-default>.panel-heading {
+    background-color: #3B73AF;
+    color: #fff;
+    border-bottom: none;
+    padding: 2px;
+}
+.lobipanel > .panel-heading > .panel-title{
+	padding-left: 5px;
+}
+.lobipanel > .panel-body{
+     overflow:hidden;
+}
+ .panel-body{
+     padding:0px!important;
+}
+.lobipanel{
+	border: 1px solid #818284;
+}
+.genericCanvasContainer .webix_template, .webix_view.genericCanvasContainer{
+	border:none!important;
+}
+.windowBodyContainer .webix_view.webix_layout_line {
+	height:auto!important;
+} 
+.windowBodyContainer{
+	overflow:auto!important;
+}
+.box {
+    padding: 0 5px 0 5px;
+}
+.dbSettingBtn {
+    font-size: 15px!important;
+    margin-top: 10px;
+    cursor:pointer;
+}
+
+.dynamicSettingBtn li{
+	 cursor:pointer;
+}
+.exportStyle li:hover {
+    background-color: #296CA3;
+    color: #fff;
+}
+.popup_title_css {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+    color: #fff !important;
+    font-size: 12px !important;
+}
+.closeicon {
+    float: right;
+    font-weight: bold;
+    right: 16px;
+    position: relative;
+    font-size: 20px;
+}
+.brix_popup.webix_window {
+    border-radius: 6px !important;
+    border: 1px solid #ccc;
+    overflow: hidden;
+    box-shadow: 0px 2px 8px 4px #888888;
+}
+.channelHeader{
+    line-height: 26px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+    font-size: 14px;
+    font-weight: 700;
+    color: #333;
+}
+.listcss .webix_list_item{
+	outline: none;
+}
+.data_compare_css{
+	border: none!important;
+}
+.webix_dtable {
+    font-size: 13px !important;
+    color: #333 !important;
+}
+.data_compare_css .webix_dd_drag_column, .data_compare_css .webix_ss_header, .data_compare_css .webix_ss_header TD, .data_compare_css .webix_ss_vscroll_header {
+    background: #FFF!important;
+}
+.data_compare_css .webix_hcell {
+    background: #F5F5F5 !important;
+}
+.data_compare_css .webix_ss_header td {
+    border-right: 1px solid #fff!important;
+    border-bottom: 1px solid #fff!important;
+}
+.webix_hcell {
+    background: white;
+    font-weight: bold;
+}
+.data_compare_css .webix_column>div, .dtCss .webix_table_cell {
+    border: none!important;
+}
+
+.webix_dd_drag_column, .webix_ss_header, .webix_ss_header TD, .webix_ss_vscroll_header {
+    font-size: 13px !important;
+    color: #333 !important;
+}
+
+.data_compare_css .webix_hcell {
+   text-align:center!important;
+}
+.data_compare_css .webix_cell{
+   text-align:center!important;
+   outline:none!important;
+}
+.webix_list_item{
+	outline:none!important;
+}
+.disabled{
+	pointer-events: none; 
+	opacity:0.5
+}
+/*.labelTextStyle{
+	text-align: center!important;
+    padding-top: 14%!important;
+    font-size: 14px!important;
+    font-weight: 700!important;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+}*/
+.labelTextStyle{
+text-align: center!important;
+    font-size: 14px!important;
+    font-weight: 700!important;
+    position:absolute!important;
+    left:45%;
+    top:50%;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+}
+
+.brix_popup.webix_window {
+    border-radius: 6px !important;
+    border: 1px solid #ccc;
+    overflow: hidden;
+    box-shadow: 0px 2px 8px 4px #888888;
+}
+.brix_popup.webix_view .webix_win_head>.webix_view>.webix_template {
+    background: #3B73AF !important;
+    box-shadow: none !important;
+    font-size: 12px;
+    font-weight: bold !important;
+    line-height: 1.666666666667;
+    padding-top: 4px !important;
+}
+.dbAnalysisaliasWindow.webix_view .webix_win_head > .webix_view > .webix_template {
+    background-color: #3B73AF!important;
+    border-bottom: none;
+}
+.dbAnalysisaliasWindow .webix_template {
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif !important;
+    color: #fff!important;
+    font-size: 12px!important;
+    line-height: 28px!important;
+}
+.dtCss, .data_compare_css {
+    border: none!important;
+}
+.webix_dtable {
+    font-size: 13px !important;
+    color: #333 !important;
+}
+.dtCss .webix_dd_drag_column, .dtCss .webix_ss_header, .dtCss .webix_ss_header TD, .dtCss .webix_ss_vscroll_header {
+    background: #FFF!important;
+}
+.dbTable .webix_hs_center .webix_hcell {
+    border-right: 1px solid #fff!important;
+}
+.dtCss .webix_hcell {
+    background: #F5F5F5 !important;
+}
+.dtCss .webix_hcell, .css_sub_level_datatable .webix_hcell {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.dbTable .webix_column div:nth-child(1) {
+    background: #f5f5f5;
+}
+.dbTable .webix_column div {
+    border-bottom: 1px solid #fff!important;
+    border-right: 1px solid #fff!important;
+}
+.dbTable .webix_column div:nth-child(2) {
+    background: #f5f5f5;
+}
+.dbTable .webix_column div {
+    border-bottom: 1px solid #fff!important;
+    border-right: 1px solid #fff!important;
+}
+.webix_dd_drag_column, .webix_ss_header, .webix_ss_header TD, .webix_ss_vscroll_header{
+	 background: #fff!important;
+}
+.dbTable .webix_ss_header td {
+    border-right: none!important;
+    border-bottom: none!important;
+}
+.dbTable .webix_hcell, .dbTable .webix_cell {
+    text-align: center;
+}
+.compareDataStyle{
+    background: #e97070;
+    width: 200px;
+    margin-left: -10px!important;
+}
+.dbTable .webix_column>div.webix_cell_select, .dbTable .webix_column>div.webix_column_select, .dbTable .webix_column>div.webix_row_select {
+    background: #EEEEEE !important;
+    color: black !important;
+}
+
+#id_window_container .webix_view.webix_layout_line{
+	height:auto!important;
+}
+.helpDropDown {
+    color: white;
+    height: 10px;
+    width: 0px;
+}
+.configSettingHeader {
+    color: #707070;
+    display: block;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 7px 17px 5px;
+    text-transform: uppercase;
+     border-bottom: 0.5px solid #CCC; 
+}
+.eleRemoveStyle{
+	display:none;
+}

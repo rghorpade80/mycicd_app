@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<HodsWebServices>
+	<HodsWebService id="HODS" functionalGroupId="00001"  isImportRequired="true">
+		<URL baseUrl="http://172.16.48.108:8080/hods/v1/"></URL>
+		<Password password="secret"></Password>
+		<Username username="superuser"></Username>
+	</HodsWebService>
+		<HodsWebService id="HODS2" functionalGroupId="00003"  isImportRequired="true">
+		<URL baseUrl="http://172.16.48.108:8080/hods/v1/"></URL>
+		<Password password="secret"></Password>
+		<Username username="superuser"></Username>
+	</HodsWebService>
+</HodsWebServices>

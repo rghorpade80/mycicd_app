@@ -1,0 +1,466 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<elements>
+	<element name="Project" iscompulsory="true" primaryAttribute="projectCode" isOptional="false">
+		<elementItem graphAttribute="projectID" dataType="String"></elementItem>
+		<elementItem graphAttribute="region" dataType="String"></elementItem>
+		<elementItem graphAttribute="projectCode" dataType="String"></elementItem>
+		<elementItem graphAttribute="modelYear" dataType="String"></elementItem>
+		<elementItem graphAttribute="model" dataType="String"></elementItem>
+		<elementItem graphAttribute="developmentFlow" dataType="String"></elementItem>
+		<elementItem graphAttribute="subProjectCode" dataType="String"></elementItem>
+		<elementItem graphAttribute="sales_Country" dataType="String"></elementItem>
+		<elementItem graphAttribute="DEV_KBN" dataType="String"></elementItem>
+		<elementItem graphAttribute="mainDevelopmentBase" dataType="String"></elementItem>
+		<elementItem graphAttribute="productPlant" dataType="String"></elementItem>
+		<elementItem graphAttribute="developmentSegment" dataType="STRING"></elementItem>
+		<elementItem graphAttribute="level" dataType="STRING"></elementItem>
+	</element>
+
+	<element name="TestPlan" iscompulsory="true" primaryAttribute="taskName" isOptional="true">
+		<elementItem graphAttribute="mspTaskGUID" dataType="String"></elementItem>
+		<elementItem graphAttribute="name" dataType="String"></elementItem>
+		<elementItem graphAttribute="testPlanTypeID" dataType="String"></elementItem>
+		<elementItem graphAttribute="testPlanGroup" dataType="String"></elementItem>
+		<elementItem graphAttribute="testPlanStartDate" dataType="Date"></elementItem>
+		<elementItem graphAttribute="testPlanEndDate" dataType="Date"></elementItem>
+		<elementItem graphAttribute="testPlanStatusFlag" dataType="String"></elementItem>
+		<elementItem graphAttribute="testPlanUpdatedDate" dataType="Date"></elementItem>
+		<elementItem graphAttribute="companyName" dataType="String"></elementItem>
+		<elementItem graphAttribute="levelName" dataType="String"></elementItem>
+		<elementItem graphAttribute="contractorCompanyName" dataType="String"></elementItem>
+		<elementItem graphAttribute="testPlanTypeName" dataType="String"></elementItem>
+		<elementItem graphAttribute="taskName" dataType="String"></elementItem>
+		<elementItem graphAttribute="description" dataType="String"></elementItem>
+		<elementItem graphAttribute="testPlanCalendar" dataType="String"></elementItem>
+		<elementItem graphAttribute="testPlanDuration" dataType="String"></elementItem>
+		<elementItem graphAttribute="personnelNecessary" dataType="String"></elementItem>
+		<elementItem graphAttribute="plannerName" dataType="String"></elementItem>
+		<elementItem graphAttribute="updaterName" dataType="String"></elementItem>
+		<elementItem graphAttribute="pic" dataType="String"></elementItem>
+		<elementItem graphAttribute="plannerGUID" dataType="String"></elementItem>
+		<elementItem graphAttribute="roleDomainID" dataType="String"></elementItem>
+		<elementItem graphAttribute="roleFunction1ID" dataType="String"></elementItem>
+		<elementItem graphAttribute="testPlanCalendar" dataType="String"></elementItem>
+		<elementItem graphAttribute="testPlanDuration" dataType="String"></elementItem>
+		<elementItem graphAttribute="arequirementNo" dataType="String"></elementItem>
+		<elementItem graphAttribute="plannerDomain" dataType="String"></elementItem>
+		<elementItem graphAttribute="plannerFunction" dataType="String"></elementItem>
+		<elementItem graphAttribute="plannerFunction2" dataType="String"></elementItem>
+		<elementItem graphAttribute="updaterID" dataType="String"></elementItem>
+		<elementItem graphAttribute="organization" dataType="String"></elementItem>
+		<elementItem graphAttribute="gouki_partNo" dataType="String"></elementItem>
+		<elementItem graphAttribute="testPlanLevel"	dataType="STRING"></elementItem>
+		<elementItem graphAttribute="testPlanTypeNameJ"	dataType="STRING"></elementItem>
+	</element>
+	
+	<element name="DocumentPlan" iscompulsory="true" primaryAttribute="taskName" isOptional="true">
+		<elementItem graphAttribute="mspTaskGUID" dataType="String"></elementItem>
+		<elementItem graphAttribute="name" dataType="String"></elementItem>
+		<elementItem graphAttribute="testPlanTypeID" dataType="String"></elementItem>
+		<elementItem graphAttribute="testPlanGroup" dataType="String"></elementItem>
+		<elementItem graphAttribute="testPlanStartDate" dataType="Date"></elementItem>
+		<elementItem graphAttribute="testPlanEndDate" dataType="Date"></elementItem>
+		<elementItem graphAttribute="testPlanStatusFlag" dataType="String"></elementItem>
+		<elementItem graphAttribute="testPlanUpdatedDate" dataType="Date"></elementItem>
+		<elementItem graphAttribute="companyName" dataType="String"></elementItem>
+		<elementItem graphAttribute="levelName" dataType="String"></elementItem>
+		<elementItem graphAttribute="contractorCompanyName" dataType="String"></elementItem>
+		<elementItem graphAttribute="testPlanTypeName" dataType="String"></elementItem>
+		<elementItem graphAttribute="taskName" dataType="String"></elementItem>
+		<elementItem graphAttribute="description" dataType="String"></elementItem>
+		<elementItem graphAttribute="testPlanCalendar" dataType="String"></elementItem>
+		<elementItem graphAttribute="testPlanDuration" dataType="String"></elementItem>
+		<elementItem graphAttribute="personnelNecessary" dataType="String"></elementItem>
+		<elementItem graphAttribute="plannerName" dataType="String"></elementItem>
+		<elementItem graphAttribute="updaterName" dataType="String"></elementItem>
+		<elementItem graphAttribute="pic" dataType="String"></elementItem>
+		<elementItem graphAttribute="plannerGUID" dataType="String"></elementItem>
+		<elementItem graphAttribute="roleDomainID" dataType="String"></elementItem>
+		<elementItem graphAttribute="roleFunction1ID" dataType="String"></elementItem>
+		<elementItem graphAttribute="testPlanCalendar" dataType="String"></elementItem>
+		<elementItem graphAttribute="testPlanDuration" dataType="String"></elementItem>
+		<elementItem graphAttribute="arequirementNo" dataType="String"></elementItem>
+		<elementItem graphAttribute="plannerDomain" dataType="String"></elementItem>
+		<elementItem graphAttribute="plannerFunction" dataType="String"></elementItem>
+		<elementItem graphAttribute="plannerFunction2" dataType="String"></elementItem>
+		<elementItem graphAttribute="updaterID" dataType="String"></elementItem>
+		<elementItem graphAttribute="organization" dataType="String"></elementItem>
+		<elementItem graphAttribute="gouki_partNo" dataType="String"></elementItem>
+		<elementItem graphAttribute="testPlanLevel"	dataType="STRING"></elementItem>
+		<elementItem graphAttribute="testPlanTypeNameJ"	dataType="STRING"></elementItem>
+	</element>
+
+	<element name="Rot" iscompulsory="true" primaryAttribute="eventID" isOptional="true">
+		<elementItem graphAttribute="eventID" dataType="String"></elementItem>
+		<elementItem graphAttribute="eventName" dataType="String"></elementItem>
+		
+	</element>
+
+	<element name="Prototype" iscompulsory="false" primaryAttribute="prototypeID" isOptional="true">
+		<elementItem graphAttribute="prototypeID" dataType="String"></elementItem>
+		<elementItem graphAttribute="destination" dataType="String"></elementItem>
+		<elementItem graphAttribute="grade" dataType="String"></elementItem>
+		<elementItem graphAttribute="event" dataType="String"></elementItem>
+		<elementItem graphAttribute="lot" dataType="String"></elementItem>
+		<elementItem graphAttribute="vinNo" dataType="String"></elementItem>
+		<elementItem graphAttribute="frameNo" dataType="String"></elementItem>
+		<elementItem graphAttribute="engNo" dataType="String"></elementItem>
+		<elementItem graphAttribute="tmNo" dataType="String"></elementItem>
+		<elementItem graphAttribute="diffNo" dataType="String"></elementItem>
+		<elementItem graphAttribute="battNo" dataType="String"></elementItem>
+		<elementItem graphAttribute="motorNo" dataType="String"></elementItem>
+		<elementItem graphAttribute="pduNo" dataType="String"></elementItem>
+		<elementItem graphAttribute="frameModelCode" dataType="String"></elementItem>
+		<elementItem graphAttribute="platformName" dataType="String"></elementItem>
+		<elementItem graphAttribute="frameSubSystemName" dataType="String"></elementItem>
+		<elementItem graphAttribute="frameFamily" dataType="String"></elementItem>
+		<elementItem graphAttribute="frame_Plant" dataType="String"></elementItem>
+		<elementItem graphAttribute="engModelCode" dataType="String"></elementItem>
+		<elementItem graphAttribute="engSubSystemName" dataType="String"></elementItem>
+		<elementItem graphAttribute="cylinders" dataType="String"></elementItem>
+		<elementItem graphAttribute="displacement" dataType="String"></elementItem>
+		<elementItem graphAttribute="engType" dataType="String"></elementItem>
+		<elementItem graphAttribute="eng_plant" dataType="String"></elementItem>
+		<elementItem graphAttribute="tmModelCode" dataType="String"></elementItem>
+		<elementItem graphAttribute="tmSubSystemName" dataType="String"></elementItem>
+		<elementItem graphAttribute="tm_plant" dataType="String"></elementItem>
+		<elementItem graphAttribute="diffModelCode" dataType="String"></elementItem>
+		<elementItem graphAttribute="diffSubSystemName" dataType="String"></elementItem>
+		<elementItem graphAttribute="diff_plant" dataType="String"></elementItem>
+		<elementItem graphAttribute="eDriveModelCode" dataType="String"></elementItem>
+		<elementItem graphAttribute="eDriveSubSystemName" dataType="String"></elementItem>
+		<elementItem graphAttribute="ipuModelCode" dataType="String"></elementItem>
+		<elementItem graphAttribute="ipuSubSystemName" dataType="String"></elementItem>
+		<elementItem graphAttribute="motorModelCode" dataType="String"></elementItem>
+		<elementItem graphAttribute="motorSubSystemName"></elementItem>
+		<elementItem graphAttribute="levelName" dataType="String"></elementItem>
+		<elementItem graphAttribute="prototypeDomain" dataType="String"></elementItem>
+		<elementItem graphAttribute="prototypeClass" dataType="String"></elementItem>
+		<elementItem graphAttribute="motorNo2" dataType="String"></elementItem>
+		<elementItem graphAttribute="steering" dataType="String"></elementItem>
+		<elementItem graphAttribute="protoProjectCode" dataType="String"></elementItem>
+		<elementItem graphAttribute="level" dataType="STRING"></elementItem>
+	</element>
+
+	<element name="Facility" iscompulsory="false" primaryAttribute="name" isOptional="true">
+		<elementItem graphAttribute="facilityID" dataType="String"></elementItem>
+		<elementItem graphAttribute="name" dataType="String"></elementItem>
+		<elementItem graphAttribute="facilityBuilding" dataType="String"></elementItem>
+		<elementItem graphAttribute="facilityFloor" dataType="String"></elementItem>
+		<elementItem graphAttribute="facilityLocation" dataType="String"></elementItem>
+		<elementItem graphAttribute="facilityRoomName" dataType="String"></elementItem>
+		<elementItem graphAttribute="levelName" dataType="String"></elementItem>
+		<elementItem graphAttribute="level" dataType="STRING"></elementItem>
+	</element>
+
+	<element name="Level" iscompulsory="true" primaryAttribute="levelName" isOptional="true">
+		<elementItem graphAttribute="levelName" dataType="String"></elementItem>
+	</element>
+
+	<element name="PlatformDesign" iscompulsory="true" primaryAttribute="platformName" isOptional="true">
+		<elementItem graphAttribute="frmTypicalModelCode" dataType="String"></elementItem>
+		<elementItem graphAttribute="frameFamily" dataType="String"></elementItem>
+		<elementItem graphAttribute="platformName" dataType="String"></elementItem>
+		<elementItem graphAttribute="levelClass" dataType="String"></elementItem>
+		<elementItem graphAttribute="levelName" dataType="String"></elementItem>
+	</element>
+
+	<element name="PowertrainSystem" iscompulsory="true" primaryAttribute="ptSystemModel" isOptional="true">
+		<elementItem graphAttribute="name" dataType="String"></elementItem>
+		<elementItem graphAttribute="ptSystemModel" dataType="String"></elementItem>
+		<elementItem graphAttribute="ptSystemSeries" dataType="String"></elementItem>
+		<elementItem graphAttribute="ptSystemDevSegment" dataType="String"></elementItem>
+		<elementItem graphAttribute="ptCategory" dataType="String"></elementItem>
+		<elementItem graphAttribute="ptDriveSystem" dataType="String"></elementItem>
+		<elementItem graphAttribute="emRegulation" dataType="String"></elementItem>
+		<elementItem graphAttribute="emCountry" dataType="String"></elementItem>
+		<elementItem graphAttribute="levelClass" dataType="String"></elementItem>
+		<elementItem graphAttribute="levelName" dataType="String"></elementItem>
+		<elementItem graphAttribute="ptENERGY" dataType="STRING"></elementItem>
+      	<elementItem graphAttribute="ptGaiyoID" dataType="STRING"></elementItem>
+		<elementItem graphAttribute="level" dataType="STRING"></elementItem>
+		<elementItem graphAttribute="awdGaiyoID" dataType="STRING"></elementItem>
+        <elementItem graphAttribute="engGaiyoID" dataType="STRING"></elementItem>
+        <elementItem graphAttribute="ipuGaiyoID" dataType="STRING"></elementItem>
+        <elementItem graphAttribute="edriveGaiyoID" dataType="STRING"></elementItem>
+        <elementItem graphAttribute="motorGaiyoID" dataType="STRING"></elementItem>
+        <elementItem graphAttribute="tmgGaiyoID" dataType="STRING"></elementItem>
+	</element>
+
+	<element name="EngineSubSystem" iscompulsory="true" primaryAttribute="engModel" isOptional="true">
+		<elementItem graphAttribute="engModel" dataType="String"></elementItem>
+		<elementItem graphAttribute="enginePlant" dataType="String"></elementItem>
+		<elementItem graphAttribute="engDisplacement" dataType="String"></elementItem>
+		<elementItem graphAttribute="engModelcode" dataType="String"></elementItem>
+		<elementItem graphAttribute="engTypicalModelCode" dataType="String"></elementItem>
+		<elementItem graphAttribute="engSeries" dataType="String"></elementItem>
+		<elementItem graphAttribute="engDevSegment" dataType="String"></elementItem>
+		<elementItem graphAttribute="engType" dataType="String"></elementItem>
+		<elementItem graphAttribute="charger" dataType="String"></elementItem>
+		<elementItem graphAttribute="inj" dataType="String"></elementItem>
+		<elementItem graphAttribute="levelName" dataType="String"></elementItem> -->
+        <elementItem graphAttribute="levelClass" dataType="STRING"></elementItem>
+		<elementItem graphAttribute="level" dataType="STRING"></elementItem>
+	</element>
+	
+	<element name="EngineModelCode" iscompulsory="true" primaryAttribute="engType" isOptional="true">
+		<elementItem graphAttribute="engType" dataType="String"></elementItem>
+		<elementItem graphAttribute="enginePlant" dataType="String"></elementItem>
+		<elementItem graphAttribute="engDisplacement" dataType="STRING"></elementItem>
+      	<elementItem graphAttribute="engTypicalModelCode" dataType="STRING"></elementItem>
+        <elementItem graphAttribute="engDevSegment" dataType="STRING"></elementItem>
+        <elementItem graphAttribute="charger" dataType="STRING"></elementItem>
+        <elementItem graphAttribute="inj" dataType="STRING"></elementItem>
+        <elementItem graphAttribute="subProjectCode" dataType="STRING"></elementItem>
+        <elementItem graphAttribute="engType1" dataType="STRING"></elementItem>
+        <elementItem graphAttribute="engType2" dataType="STRING"></elementItem>
+        <elementItem graphAttribute="engType3" dataType="STRING"></elementItem>
+	</element>
+
+	<element name="TMSubSystem" iscompulsory="true" primaryAttribute="tmModel" isOptional="true">
+		<elementItem graphAttribute="tmModel" dataType="String"></elementItem>
+		<elementItem graphAttribute="tmPlant" dataType="String"></elementItem>
+		<elementItem graphAttribute="tmModelCode" dataType="String"></elementItem>
+		<elementItem graphAttribute="tmTypicalModelCode" dataType="String"></elementItem>
+		<elementItem graphAttribute="tmSeries" dataType="String"></elementItem>
+		<elementItem graphAttribute="tmDevSegment" dataType="String"></elementItem>
+		<elementItem graphAttribute="tmStructure" dataType="String"></elementItem>
+	</element>
+	
+	<element name="TMModelCode" iscompulsory="true" primaryAttribute="tmType" isOptional="true">
+		<elementItem graphAttribute="tmPlant" dataType="STRING"></elementItem>
+		<elementItem graphAttribute="tmTypicalModelCode" dataType="STRING"></elementItem>
+		<elementItem graphAttribute="tmDevSegment"  dataType="STRING"></elementItem>
+		<elementItem graphAttribute="tmType"  dataType="STRING"></elementItem>
+		<elementItem graphAttribute="tmType1"  dataType="STRING"></elementItem>
+		<elementItem graphAttribute="tmType2"  dataType="STRING"></elementItem>
+		<elementItem graphAttribute="tmType3"  dataType="STRING"></elementItem>
+		<elementItem graphAttribute="tmType4"  dataType="STRING"></elementItem>
+		<elementItem graphAttribute="tmType5"  dataType="STRING"></elementItem>
+		<elementItem graphAttribute="tmType6"  dataType="STRING"></elementItem>
+		<elementItem graphAttribute="subProjectCode"  dataType="STRING"></elementItem>
+	</element>
+     
+
+	<element name="EDriveSubSystem" iscompulsory="true" primaryAttribute="eDriveModel" isOptional="true">
+		<elementItem graphAttribute="eDriveModel" dataType="String"></elementItem>
+		<elementItem graphAttribute="eDriveModelcode" dataType="String"></elementItem>
+		<elementItem graphAttribute="eDriveSeries" dataType="String"></elementItem>
+		<elementItem graphAttribute="eDriveDevSegment" dataType="String"></elementItem>
+		<elementItem graphAttribute="levelClass" dataType="STRING"></elementItem>
+		<elementItem graphAttribute="level" dataType="STRING"></elementItem>
+	</element>
+	
+	<element name="EDriveModelCode" iscompulsory="true" primaryAttribute="eDriveModelcode" isOptional="true">
+	   <elementItem graphAttribute="eDriveModelcode" dataType="STRING"></elementItem>
+       <elementItem graphAttribute="eDriveDevSegment" dataType="STRING"></elementItem>
+    </element>
+	 
+	<element name="IPUSubSystem" iscompulsory="true" primaryAttribute="ipuModelCode" isOptional="true">
+		<elementItem graphAttribute="ipuModelCode" dataType="String"></elementItem>
+		<elementItem graphAttribute="ipuTypicalModelCode" dataType="String"></elementItem>
+		<elementItem graphAttribute="ipuModel" dataType="String"></elementItem>
+		<elementItem graphAttribute="ipuSeries" dataType="String"></elementItem>
+		<elementItem graphAttribute="ipuDevSegment" dataType="String"></elementItem>
+		<elementItem graphAttribute="levelClass" dataType="STRING"></elementItem>
+		<elementItem graphAttribute="level" dataType="STRING"></elementItem>
+	</element>
+	
+	<element name="IPUModelCode" iscompulsory="true" primaryAttribute="ipuType" isOptional="true">
+	  	<elementItem graphAttribute="ipuTypicalModelCode" dataType="STRING"></elementItem>
+      	<elementItem graphAttribute="ipuDevSegment" dataType="STRING"></elementItem>
+		<elementItem graphAttribute="ipuType" dataType="STRING"></elementItem>
+		<elementItem graphAttribute="ipuType1" dataType="STRING"></elementItem>
+		<elementItem graphAttribute="ipuType2" dataType="STRING"></elementItem>
+		<elementItem graphAttribute="ipuType3" dataType="STRING"></elementItem>
+		<elementItem graphAttribute="ipuType4" dataType="STRING"></elementItem>
+		<elementItem graphAttribute="ipuType5" dataType="STRING"></elementItem>
+		<elementItem graphAttribute="ipuType6" dataType="STRING"></elementItem>
+		<elementItem graphAttribute="subProjectCode" dataType="STRING"></elementItem>
+    </element>
+
+	<element name="MotorSubSystem" iscompulsory="true" primaryAttribute="awdModelCode" isOptional="true">
+		<elementItem graphAttribute="motorModelCode" dataType="String"></elementItem>
+		<elementItem graphAttribute="motorTypicalModelCode" dataType="String"></elementItem>
+		<elementItem graphAttribute="motorModel" dataType="String"></elementItem>
+		<elementItem graphAttribute="motorSeries" dataType="String"></elementItem>
+		<elementItem graphAttribute="motorDevSegment" dataType="String"></elementItem>
+		<elementItem graphAttribute="levelClass" dataType="STRING"></elementItem>
+		<elementItem graphAttribute="level" dataType="STRING"></elementItem>
+	</element>
+	
+	<element name="MotorModelCode" iscompulsory="true" primaryAttribute="motorTypicalModelCode" isOptional="true">
+	   	<elementItem graphAttribute="motorTypicalModelCode" dataType="STRING"></elementItem>
+		<elementItem graphAttribute="motorDevSegment"  dataType="STRING"></elementItem>
+	    <elementItem graphAttribute="motorPlant" dataType="STRING"></elementItem>
+		<elementItem graphAttribute="motorType" dataType="STRING"></elementItem>
+		<elementItem graphAttribute="motorType1"	dataType="STRING"></elementItem>
+		<elementItem graphAttribute="motorType2"  dataType="STRING"></elementItem>
+		<elementItem graphAttribute="motorType3"  dataType="STRING"></elementItem>
+		<elementItem graphAttribute="motorType4"  dataType="STRING"></elementItem>
+		<elementItem graphAttribute="motorType5"  dataType="STRING"></elementItem>
+		<elementItem graphAttribute="motorType6"  dataType="STRING"></elementItem>
+		<elementItem graphAttribute="subProjectCode"  dataType="STRING"></elementItem>
+    </element>
+	
+
+	<element name="AWDSubSystem" iscompulsory="true" primaryAttribute="awdModelCode" isOptional="true">
+		<elementItem graphAttribute="awdModelCode" dataType="String"></elementItem>
+		<elementItem graphAttribute="awdTypicalModelCode" dataType="String"></elementItem>
+		<elementItem graphAttribute="awdModel" dataType="String"></elementItem>
+		<elementItem graphAttribute="awdSeries" dataType="String"></elementItem>
+		<elementItem graphAttribute="awdDevSegment" dataType="String"></elementItem>
+		<elementItem graphAttribute="trfLayout" dataType="String"></elementItem>
+        <elementItem graphAttribute="levelClass" dataType="STRING"></elementItem>
+		<elementItem graphAttribute="level" dataType="STRING"></elementItem>		
+	</element>
+	
+	<element name="AWDModelCode" iscompulsory="true" primaryAttribute="awdTypicalModelCode" isOptional="true">
+       	<elementItem graphAttribute="awdTypicalModelCode" dataType="STRING"></elementItem>
+      	<elementItem graphAttribute="awdDevSegment" dataType="STRING"></elementItem>
+      	<elementItem graphAttribute="awdPlant" dataType="STRING"></elementItem>
+		<elementItem graphAttribute="awdType" dataType="STRING"></elementItem>
+		<elementItem graphAttribute="awdType1" dataType="STRING"></elementItem>
+		<elementItem graphAttribute="awdType2" dataType="STRING"></elementItem>
+		<elementItem graphAttribute="awdType3" dataType="STRING"></elementItem>
+		<elementItem graphAttribute="awdType4" dataType="STRING"></elementItem>
+		<elementItem graphAttribute="awdType5" dataType="STRING"></elementItem>
+		<elementItem graphAttribute="awdType6" dataType="STRING"></elementItem>
+		<elementItem graphAttribute="subProjectCode" dataType="STRING"></elementItem>
+    </element>	
+
+	<element name="ChargingSubSystem" iscompulsory="true" primaryAttribute="chargingModel" isOptional="true">
+		<elementItem graphAttribute="chargingTypicalModelCode" dataType="String"></elementItem>
+		<elementItem graphAttribute="chargingModel" dataType="String"></elementItem>
+		<elementItem graphAttribute="chargingSeries" dataType="String"></elementItem>
+		<elementItem graphAttribute="chargingDevSegment" dataType="String"></elementItem>
+		<elementItem graphAttribute="levelClass" dataType="STRING"></elementItem>
+		<elementItem graphAttribute="level" dataType="STRING"></elementItem>
+	</element>
+	
+	 <element name="ChargingModelCode" iscompulsory="true" primaryAttribute="chargingTypicalModelCode" isOptional="true">
+		<elementItem graphAttribute="chargingTypicalModelCode" dataType="STRING"></elementItem>
+      	<elementItem graphAttribute="chargingDevSegment" dataType="STRING"></elementItem>
+        <elementItem graphAttribute="chargingPlant"  dataType="STRING"></elementItem>
+		<elementItem graphAttribute="chargingType"  dataType="STRING"></elementItem>
+		<elementItem graphAttribute="chargingType1"  dataType="STRING"></elementItem>
+		<elementItem graphAttribute="chargingType2"  dataType="STRING"></elementItem>
+		<elementItem graphAttribute="chargingType3"  dataType="STRING"></elementItem>
+		<elementItem graphAttribute="chargingType4"  dataType="STRING"></elementItem>
+		<elementItem graphAttribute="chargingType5"  dataType="STRING"></elementItem>
+		<elementItem graphAttribute="chargingType6"  dataType="STRING"></elementItem>
+		<elementItem graphAttribute="subProjectCode"  dataType="STRING"></elementItem>
+    </element>	
+
+	<element name="FunctionalGroup" iscompulsory="true" primaryAttribute="roleDomainID" isOptional="false">
+		<elementItem graphAttribute="roleDomainID" dataType="String"></elementItem>
+		<elementItem graphAttribute="roleFunction1ID" dataType="String"></elementItem>
+		<elementItem graphAttribute="roleFunction2" dataType="String"></elementItem>
+		<elementItem graphAttribute="roleFunction2ID" dataType="String"></elementItem>
+		<elementItem graphAttribute="roleDomainID" dataType="String"></elementItem>
+		<elementItem graphAttribute="roleFunction1ID" dataType="String"></elementItem>
+		<elementItem graphAttribute="roleDomain" dataType="String"></elementItem>
+		<elementItem graphAttribute="roleFunction1" dataType="String"></elementItem>
+		<elementItem graphAttribute="domainID" dataType="STRING"></elementItem>
+      	
+	</element>
+
+	<element name="L3_L4_Component" iscompulsory="true" primaryAttribute="compModel" isOptional="true">
+		<elementItem graphAttribute="compModel" dataType="String"></elementItem>
+		<elementItem graphAttribute="compSeries" dataType="String"></elementItem>
+		<elementItem graphAttribute="levelClass" dataType="String"></elementItem>
+		<elementItem graphAttribute="levelName" dataType="String"></elementItem>
+	</element>
+
+	<element name="Test" iscompulsory="true" primaryAttribute="name" isOptional="true">
+		<elementItem graphAttribute="name" dataType="String"></elementItem>
+		<elementItem graphAttribute="compSeries" dataType="String"></elementItem>
+		<elementItem graphAttribute="levelClass" dataType="String"></elementItem>
+		<elementItem graphAttribute="levelName" dataType="String"></elementItem>
+		<elementItem graphAttribute="mspTaskGUID"  dataType="STRING"></elementItem>
+		<elementItem graphAttribute="testPlanTypeID"		dataType="STRING"></elementItem>
+		<elementItem graphAttribute="testPlanGroup"	dataType="STRING"></elementItem>
+		<elementItem graphAttribute="testPlanStartDate"	dataType="DATE"></elementItem>
+		<elementItem graphAttribute="testPlanEndDate"	dataType="DATE"></elementItem>
+		<elementItem graphAttribute="testPlanStatusFlag"		dataType="STRING"></elementItem>
+		<elementItem graphAttribute="testPlanUpdatedDate"	dataType="DATE"></elementItem>
+		<elementItem graphAttribute="companyName"	dataType="STRING"></elementItem>
+		<elementItem graphAttribute="testPlanLevel"	dataType="STRING"></elementItem>
+		<elementItem graphAttribute="contractorCompanyName"	dataType="STRING"></elementItem>
+		<elementItem graphAttribute="testPlanTypeName"	dataType="STRING"></elementItem>
+		<elementItem graphAttribute="testPlanTypeNameJ"	dataType="STRING"></elementItem>
+		<elementItem graphAttribute="taskName"	dataType="STRING"></elementItem>
+		<elementItem graphAttribute="testPlanDuration"	dataType="STRING"></elementItem>
+		<elementItem graphAttribute="personnelNecessary"		dataType="STRING"></elementItem>
+		<elementItem graphAttribute="plannerName"	dataType="STRING"></elementItem>
+		<elementItem graphAttribute="updaterName"	dataType="STRING"></elementItem>
+		<elementItem graphAttribute="pic"	dataType="STRING"></elementItem>
+		<elementItem graphAttribute="plannerGUID"	dataType="STRING"></elementItem>
+		<elementItem graphAttribute="roleDomainID"	dataType="STRING"></elementItem>
+		<elementItem graphAttribute="roleFunction1ID"	dataType="STRING"></elementItem>
+		<elementItem graphAttribute="testPlanCalendar"	dataType="STRING"></elementItem>
+		<elementItem graphAttribute="arequirementNo"	dataType="STRING"></elementItem>
+		<elementItem graphAttribute="plannerDomain"	dataType="STRING"></elementItem>
+		<elementItem graphAttribute="plannerFunction"	dataType="STRING"></elementItem>
+		<elementItem graphAttribute="plannerFunction2"	dataType="STRING"></elementItem>
+		<elementItem graphAttribute="updaterID"	dataType="STRING"></elementItem>
+		<elementItem graphAttribute="organization"	dataType="STRING"></elementItem>
+		<elementItem graphAttribute="gouki_partNo" dataType="STRING"></elementItem>
+	</element>
+	<element name="Measurement" iscompulsory="false" primaryAttribute="name" isOptional="true">
+		<elementItem graphAttribute="name" dataType="String"></elementItem>
+	</element>
+	<element name="UnitUnderTest" iscompulsory="false" primaryAttribute="name" isOptional="true">
+		<elementItem graphAttribute="name" dataType="String"></elementItem>
+	</element>
+	<element name="DataName" iscompulsory="false" primaryAttribute="dataName" isOptional="true">
+		<elementItem graphAttribute="dataName" dataType="String"></elementItem>
+	</element>
+	<element name="Layer1_Node" iscompulsory="false" primaryAttribute="GraphMLId" isOptional="true">
+		<elementItem graphAttribute="GraphMLId" dataType="String"></elementItem>
+		<elementItem graphAttribute="Word" dataType="String"></elementItem>
+		<elementItem graphAttribute="Category" dataType="String"></elementItem>
+	</element>
+	
+	<element name="Document" iscompulsory="true" primaryAttribute="document" isOptional="true">
+		<elementItem graphAttribute="document" dataType="String"></elementItem>
+		<elementItem graphAttribute="mspTaskGUID" dataType="String"></elementItem>
+		<elementItem graphAttribute="documentID" dataType="String"></elementItem>
+		<elementItem graphAttribute="URL" dataType="String"></elementItem>
+	</element>  
+
+	<element name="SalesRegion" iscompulsory="true" primaryAttribute="name" isOptional="true">
+		<elementItem graphAttribute="name" dataType="String"></elementItem>
+		<elementItem graphAttribute="salesRegionKey" dataType="String"></elementItem>
+		<elementItem graphAttribute="salesRegion" dataType="String"></elementItem>
+		<elementItem graphAttribute="description" dataType="String"></elementItem>
+	</element>
+	
+	<element name="Administration" iscompulsory="true" primaryAttribute="name" isOptional="true">
+		<elementItem graphAttribute="name" dataType="String"></elementItem>
+		<elementItem graphAttribute="administrationKey" dataType="String"></elementItem>
+		<elementItem graphAttribute="administrator" dataType="String"></elementItem>
+		<elementItem graphAttribute="description" dataType="String"></elementItem>
+	</element>
+	
+	<element name="Regulation" iscompulsory="true" primaryAttribute="name" isOptional="true">
+		<elementItem graphAttribute="name" dataType="String"></elementItem>
+		<elementItem graphAttribute="regulationName" dataType="String"></elementItem>
+		<elementItem graphAttribute="regulationKey" dataType="String"></elementItem>
+		<elementItem graphAttribute="description" dataType="String"></elementItem>
+	</element>
+	
+	<element name="RegulationClass" iscompulsory="true" primaryAttribute="name" isOptional="true">
+		<elementItem graphAttribute="name" dataType="String"></elementItem>
+		<elementItem graphAttribute="regulationClass" dataType="String"></elementItem>
+		<elementItem graphAttribute="regulationClassificationKey" dataType="String"></elementItem>
+		<elementItem graphAttribute="description" dataType="String"></elementItem>
+	</element>
+	
+	<element name="SalesCountry" iscompulsory="true" primaryAttribute="name" isOptional="true">
+		<elementItem graphAttribute="name" dataType="String"></elementItem>
+		<elementItem graphAttribute="salesCountry" dataType="String"></elementItem>
+		<elementItem graphAttribute="countryKey" dataType="String"></elementItem>
+		<elementItem graphAttribute="description" dataType="String"></elementItem>
+	</element>
+</elements>                        

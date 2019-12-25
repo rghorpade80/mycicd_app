@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<relations>
+    <relation from="FunctionalGroup" name="ProjectInfo" to="Project" reltype="out" ></relation>
+	<relation from="Project" name="TestPlanInfo" to="TestPlan" reltype="out" ></relation>
+	<relation from="Project" name="DocumentPlanInfo" to="DocumentPlan" reltype="out" ></relation>
+	<relation from="Project" name="PowerTrainInfo" to="PowertrainSystem" reltype="out" ></relation>
+	<relation from="TestPlan" name="PlaformDesignInfo" to="PlatformDesign" reltype="out"></relation>
+	<relation from="TestPlan" name="PowerTrainInfo" to="PowertrainSystem" reltype="out"></relation>
+	<relation from="TestPlan" name="L3_L4ComponentInfo" to="L3_L4Component" reltype="out"></relation>
+	<relation from="TestPlan" name="SubSystemInfo" to="EngineSubSystem" reltype="out"></relation>
+	<relation from="TestPlan" name="FacilityInfo" to="Facility" reltype="out"></relation>
+	<relation from="TestPlan" name="PrototypeInfo" to="Prototype" reltype="out"></relation>
+	<relation from="TestPlan" name="TestInfo" to="Test" reltype="out"></relation>
+	<relation from="TestPlan" name="rotInfo" to="Rot" reltype="out"></relation>
+	<relation from="TestPlan" name="DataNameInfo" to="DataName" reltype="out"></relation> <!-- Customized -->
+	<relation from="DocumentPlan" name="DocumentInfo" to="Document" reltype="out" ></relation>
+	<relation from="PowertrainSystem" name="SubSystemInfo" to="EngineSubSystem" reltype="out"></relation> 
+ 	<relation from="EngineSubSystem" name="ModelCodeInfo" to="EngineModelCode" reltype="out"></relation>
+ 	<relation from="EngineSubSystem" name="L3_L4ComponentInfo" to="L3_L4Component" reltype="out"></relation>	
+ 	<relation from="Test" name="DataNameInfo" to="DataName" reltype="out" ></relation> 
+ 	<relation from="Test" name="MeasurementInfo" to="Measurement" reltype="out" ></relation> 
+ 	<relation from="DataName" name="MeasurementInfo" to="Measurement" reltype="out"></relation> 
+	<relation from="DocumentPlan" name="PlaformDesignInfo" to="PlatformDesign" reltype="out"></relation>
+	<relation from="DocumentPlan" name="PowerTrainInfo" to="PowertrainSystem" reltype="out"></relation>
+	<relation from="DocumentPlan" name="L3_L4ComponentInfo" to="L3_L4Component" reltype="out"></relation>
+	<relation from="DocumentPlan" name="SubSystemInfo" to="EngineSubSystem" reltype="out"></relation>
+	<relation from="DocumentPlan" name="FacilityInfo" to="Facility" reltype="out"></relation>
+	<relation from="DocumentPlan" name="PrototypeInfo" to="Prototype" reltype="out"></relation>
+	<relation from="DocumentPlan" name="rotInfo" to="Rot" reltype="out"></relation>
+ 	<relation from="Layer1_Node" name="Layer1_Edge" to="Layer1_Node" reltype="out"></relation> 
+</relations>                        
