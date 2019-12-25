@@ -52,7 +52,7 @@ pipeline {
         stage ('BUILD DOCKER IMAGE'){
             steps{
 			   
-                #sh 'docker rmi -f rghorpade80:/iasys/$JOB_NAME:latest'
+              
                 sh 'cd $DOCKER_IMAGE_CREATE_HOME && docker build --tag $JOB_NAME:v1.$BUILD_ID . '
                 sh 'docker tag $JOB_NAME:v1.$BUILD_ID rghorpade80:/iasys/$JOB_NAME:v1.$BUILD_ID'
                 sh 'docker tag $JOB_NAME:v1.$BUILD_ID rghorpade80:/iasys/$JOB_NAME:latest'
