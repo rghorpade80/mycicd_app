@@ -2,7 +2,7 @@
 FROM java:8
 
 # Maintainer
-MAINTAINER "grajendra@iasys.co.in"
+MAINTAINER "rghorpade80@gmail.com"
 WORKDIR /usr/local/
 COPY . /usr/local/
 EXPOSE 8092

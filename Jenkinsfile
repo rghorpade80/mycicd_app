@@ -2,7 +2,7 @@ pipeline {
     agent any 
     environment {
         MAVEN_HOME = tool('Maven')
-        JAVA_HOME = tool('JAVA')
+        JAVA_HOME = tool('JDK')
     }
     
     stages {
@@ -23,20 +23,20 @@ pipeline {
                 sh label: '', script: '''
                 
                 #! bin/bash
-
-                cd /home/jenkins/Docker_image/Graph_Search
+              
                     
                 workspace_HOME=/var/lib/jenkins/workspace/$JOB_NAME
+				DOCKER_IMAGE_CREATE_HOME=/home/centos/docker_images_for_jenkins/$JOB_NAME
                     
-                cp -R $workspace_HOME/config/* /home/jenkins/Docker_image/Graph_Search/config/
+                cp -R $workspace_HOME/config/* $DOCKER_IMAGE_CREATE_HOME/config/
                     
-                cp -R $workspace_HOME/src/main/webapp/WEB-INF/views/* $HOME/Docker_image/Graph_Search/src/main/webapp/WEB-INF/views/
+                cp -R $workspace_HOME/src/main/webapp/WEB-INF/views/* $DOCKER_IMAGE_CREATE_HOME/src/main/webapp/WEB-INF/views/
                     
-                cp -R $workspace_HOME/target/GraphSearchPortal-0.0.1-SNAPSHOT.jar $HOME/Docker_image/Graph_Search
+                cp -R $workspace_HOME/target/GraphSearchPortal-0.0.1-SNAPSHOT.jar $DOCKER_IMAGE_CREATE_HOME
                     
-                mv $HOME/Docker_image/Graph_Search/GraphSearchPortal-0.0.1-SNAPSHOT.jar $HOME/Docker_image/Graph_Search/GraphSearchPortal.jar
+                mv $DOCKER_IMAGE_CREATE_HOME/GraphSearchPortal-0.0.1-SNAPSHOT.jar $DOCKER_IMAGE_CREATE_HOME/GraphSearchPortal.jar
                     
-                cd $HOME/Docker_image/Graph_Search/config
+                cd $DOCKER_IMAGE_CREATE_HOME
                 sed -i "s/172.16.200.72:8090/172.16.48.108:8080/g"  webServicesURL.xml   ;
                 sed -i "s/honda/hods/g" webServicesURL.xml ;
                 sed -i "s/ITVSTestDB/ToyotaDB2/g" application.properties ;
@@ -52,13 +52,13 @@ pipeline {
         stage ('BUILD DOCKER IMAGE'){
             steps{
 			   
-                sh 'docker rmi -f HJWIN10PVJTDE24:5002/iasys/$JOB_NAME:latest'
-                sh 'cd /home/jenkins/Docker_image/Graph_Search && docker build --tag $JOB_NAME:v1.$BUILD_ID . '
-                sh 'docker tag $JOB_NAME:v1.$BUILD_ID HJWIN10PVJTDE24:5002/iasys/$JOB_NAME:v1.$BUILD_ID'
-                sh 'docker tag $JOB_NAME:v1.$BUILD_ID HJWIN10PVJTDE24:5002/iasys/$JOB_NAME:latest'
-                sh 'docker push HJWIN10PVJTDE24:5002/iasys/$JOB_NAME:v1.$BUILD_ID'
-                sh 'docker push HJWIN10PVJTDE24:5002/iasys/$JOB_NAME:latest'
-                sh 'docker rmi -f HJWIN10PVJTDE24:5002/iasys/$JOB_NAME:v1.$BUILD_ID'
+              
+                sh 'cd $DOCKER_IMAGE_CREATE_HOME && docker build --tag $JOB_NAME:v1.$BUILD_ID . '
+                sh 'docker tag $JOB_NAME:v1.$BUILD_ID rghorpade80:/iasys/$JOB_NAME:v1.$BUILD_ID'
+                sh 'docker tag $JOB_NAME:v1.$BUILD_ID rghorpade80:/iasys/$JOB_NAME:latest'
+                sh 'docker push rghorpade80:/iasys/$JOB_NAME:v1.$BUILD_ID'
+                sh 'docker push rghorpade80:/iasys/$JOB_NAME:latest'
+                sh 'docker rmi -f rghorpade80:/iasys/$JOB_NAME:v1.$BUILD_ID'
                 sh 'docker rmi -f $JOB_NAME:v1.$BUILD_ID'
                 
             }
@@ -68,7 +68,7 @@ pipeline {
         stage ('DEPLOY GRAPH SEARCH ON K8S'){
 		
             steps{
-					kubernetesDeploy configs: 'graph-deployment.yml', kubeConfig: [path: ''], kubeconfigId: 'KUBE_CLUSTER_CONFIG', secretName: '', ssh: [sshCredentialsId: '*', sshServer: ''], textCredentials: [certificateAuthorityData: '', clientCertificateData: '', clientKeyData: '', serverUrl: 'https://']
+					kubernetesDeploy configs: 'deployment.yml', kubeConfig: [path: ''], kubeconfigId: 'kubeconfig', secretName: '', ssh: [sshCredentialsId: '*', sshServer: ''], textCredentials: [certificateAuthorityData: '', clientCertificateData: '', clientKeyData: '', serverUrl: 'https://']
 					
             }
             
