@@ -36,7 +36,7 @@ pipeline {
                     
                 mv $DOCKER_IMAGE_CREATE_HOME/GraphSearchPortal-0.0.1-SNAPSHOT.jar $DOCKER_IMAGE_CREATE_HOME/GraphSearchPortal.jar
                     
-                cd $DOCKER_IMAGE_CREATE_HOME
+                cd $DOCKER_IMAGE_CREATE_HOME/config/
                 sed -i "s/172.16.200.72:8090/172.16.48.108:8080/g"  webServicesURL.xml   ;
                 sed -i "s/honda/hods/g" webServicesURL.xml ;
                 sed -i "s/ITVSTestDB/ToyotaDB2/g" application.properties ;
