@@ -26,7 +26,12 @@ pipeline {
               
                     
                 workspace_HOME=/var/lib/jenkins/workspace/$JOB_NAME
-				DOCKER_IMAGE_CREATE_HOME=/var/lib/jenkins/docker_images_for_jenkins/$JOB_NAME
+		
+		mkdir -p /var/lib/jenkins/docker_images_for_jenkins/$JOB_NAME/config/
+		
+		mkdir -p /var/lib/jenkins/docker_images_for_jenkins/$JOB_NAME/src/main/webapp/WEB-INF/views/
+		
+		DOCKER_IMAGE_CREATE_HOME=/var/lib/jenkins/docker_images_for_jenkins/$JOB_NAME
                     
                 cp -R $workspace_HOME/config/* $DOCKER_IMAGE_CREATE_HOME/config/
                     
