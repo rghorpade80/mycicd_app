@@ -30,7 +30,7 @@ spec:
     spec:
       containers:
       - name: graph11
-        image: HJWIN10PVJTDE24:5002/iasys_d/graph_search_doc:latest
+        image: rghorpade80/mycicd_app_repo:latest
         ports:
         - containerPort: 8093
 
