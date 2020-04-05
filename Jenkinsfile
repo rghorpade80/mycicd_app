@@ -75,12 +75,13 @@ pipeline {
 	   stage('PUSH IMAGE') {
            steps{
                script {
-                        docker.withRegistry( '', registryCredential ) 
+		       docker.withRegistry( '', registryCredential ) {
 		       
 		       	sh 'docker push rghorpade80/mycicd_app_repo/$JOB_NAME:v1.$BUILD_ID'
                         sh 'docker push rghorpade80/mycicd_app_repo/$JOB_NAME:latest'
                         sh 'docker rmi -f rghorpade80/mycicd_app_repo/$JOB_NAME:v1.$BUILD_ID'
                         sh 'docker rmi -f $JOB_NAME:v1.$BUILD_ID'
+		     }
         }
       }
     }
