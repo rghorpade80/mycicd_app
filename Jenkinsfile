@@ -64,8 +64,8 @@ pipeline {
 			   
               
                 sh 'cd /var/lib/jenkins/docker_images_for_jenkins/mycicd_test_app_pipeline && docker build --tag $JOB_NAME:v1.$BUILD_ID . '
-                sh 'docker tag $JOB_NAME:v1.$BUILD_ID rghorpade80/mycicd_app_repo/$JOB_NAME:v1.$BUILD_ID'
-                sh 'docker tag $JOB_NAME:v1.$BUILD_ID rghorpade80/mycicd_app_repo/$JOB_NAME:latest'
+                sh 'docker tag $JOB_NAME:v1.$BUILD_ID rghorpade80/mycicd_app_repo:v1.$BUILD_ID'
+                sh 'docker tag $JOB_NAME:v1.$BUILD_ID rghorpade80/mycicd_app_repo:latest'
                 
                 
             }
@@ -77,8 +77,8 @@ pipeline {
                script {
 		       docker.withRegistry( '', registryCredential ) {
 		       
-		       	sh 'docker push rghorpade80/mycicd_app_repo:$JOB_NAME:v1.$BUILD_ID'
-                        sh 'docker push rghorpade80/mycicd_app_repo:$JOB_NAME:latest'
+		       	sh 'docker push rghorpade80/mycicd_app_repo:v1.$BUILD_ID'
+                        sh 'docker push rghorpade80/mycicd_app_repo:latest'
                         sh 'docker rmi -f rghorpade80/mycicd_app_repo/$JOB_NAME:v1.$BUILD_ID'
                         sh 'docker rmi -f $JOB_NAME:v1.$BUILD_ID'
 		     }
