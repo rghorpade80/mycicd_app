@@ -61,7 +61,7 @@ pipeline {
             steps{
 			   
               
-                sh 'cd $DOCKER_IMAGE_CREATE_HOME && docker build --tag $JOB_NAME:v1.$BUILD_ID . '
+                sh 'cd $DOCKER_IMAGE_CREATE_HOME/docker_images_for_jenkins/mycicd_test_app_pipeline/ && docker build --tag $JOB_NAME:v1.$BUILD_ID . '
                 sh 'docker tag $JOB_NAME:v1.$BUILD_ID rghorpade80/mycicd_app_repo/$JOB_NAME:v1.$BUILD_ID'
                 sh 'docker tag $JOB_NAME:v1.$BUILD_ID rghorpade80/mycicd_app_repo/$JOB_NAME:latest'
                 sh 'docker push rghorpade80/mycicd_app_repo/$JOB_NAME:v1.$BUILD_ID'
