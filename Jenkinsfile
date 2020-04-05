@@ -3,6 +3,8 @@ pipeline {
     environment {
         MAVEN_HOME = tool('Maven')
         JAVA_HOME = tool('JDK')
+		registry = "rghorpade80/mycicd_app_repo"
+        registryCredential = 'docker_hub_login'
     }
     
     stages {
@@ -64,15 +66,28 @@ pipeline {
                 sh 'cd /var/lib/jenkins/docker_images_for_jenkins/mycicd_test_app_pipeline && docker build --tag $JOB_NAME:v1.$BUILD_ID . '
                 sh 'docker tag $JOB_NAME:v1.$BUILD_ID rghorpade80/mycicd_app_repo/$JOB_NAME:v1.$BUILD_ID'
                 sh 'docker tag $JOB_NAME:v1.$BUILD_ID rghorpade80/mycicd_app_repo/$JOB_NAME:latest'
-                sh 'docker push rghorpade80/mycicd_app_repo/$JOB_NAME:v1.$BUILD_ID'
-                sh 'docker push rghorpade80/mycicd_app_repo/$JOB_NAME:latest'
-                sh 'docker rmi -f rghorpade80/mycicd_app_repo/$JOB_NAME:v1.$BUILD_ID'
-                sh 'docker rmi -f $JOB_NAME:v1.$BUILD_ID'
+                
                 
             }
             
         }
        
+	   stage('PUSH IMAGE') {
+           steps{
+               script {
+                        docker.withRegistry( '', registryCredential ) {
+						
+						sh 'docker push rghorpade80/mycicd_app_repo/$JOB_NAME:v1.$BUILD_ID'
+                        sh 'docker push rghorpade80/mycicd_app_repo/$JOB_NAME:latest'
+                        sh 'docker rmi -f rghorpade80/mycicd_app_repo/$JOB_NAME:v1.$BUILD_ID'
+                        sh 'docker rmi -f $JOB_NAME:v1.$BUILD_ID'
+                        
+          }
+        }
+      }
+    }
+	   
+	   
         stage ('DEPLOY GRAPH SEARCH ON K8S'){
 		
             steps{
