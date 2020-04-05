@@ -64,8 +64,8 @@ pipeline {
 			   
               
                 sh 'cd /var/lib/jenkins/docker_images_for_jenkins/mycicd_test_app_pipeline && docker build --tag $JOB_NAME:v1.$BUILD_ID . '
-                sh 'docker tag $JOB_NAME:v1.$BUILD_ID rghorpade80/mycicd_app_repo:$JOB_NAME:v1.$BUILD_ID'
-                sh 'docker tag $JOB_NAME:v1.$BUILD_ID rghorpade80/mycicd_app_repo:$JOB_NAME:latest'
+                sh 'docker tag $JOB_NAME:v1.$BUILD_ID rghorpade80/mycicd_app_repo/$JOB_NAME:v1.$BUILD_ID'
+                sh 'docker tag $JOB_NAME:v1.$BUILD_ID rghorpade80/mycicd_app_repo/$JOB_NAME:latest'
                 
                 
             }
