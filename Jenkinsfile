@@ -34,7 +34,7 @@ pipeline {
 		
 		DOCKER_IMAGE_CREATE_HOME=/var/lib/jenkins/docker_images_for_jenkins/$JOB_NAME
 		
-		cp -R workspace_HOME/Dockerfile DOCKER_IMAGE_CREATE_HOME/
+		cp -R $workspace_HOME/Dockerfile $DOCKER_IMAGE_CREATE_HOME/
                     
                 cp -R $workspace_HOME/config/* $DOCKER_IMAGE_CREATE_HOME/config/
                     
